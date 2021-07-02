@@ -46,6 +46,8 @@ export default {
           this.$store.state.restartButtonText = 'Play Again!'
         } else {
          this.$store.state.messageDisplay = "Try Again!";
+	 let index =  this.$store.state.colors.findIndex(cuadro => cuadro == squareColor);
+         this.$store.state.colors.splice(index, 1, '#232323');
         }
       },
       PickColor() {
